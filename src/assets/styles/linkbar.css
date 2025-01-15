@@ -1,0 +1,40 @@
+/* linkbar */
+
+.linkBar{
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.linkBar svg{
+    max-width: 24px;
+    color: lightgray;
+    position: sticky;
+}
+
+.githubSVG{
+    padding-bottom: 30px;
+}
+
+.linkedInSVG{
+    padding-bottom: 30px;
+}
+
+.linkBar a:hover .svgChild{
+    fill: #FFD464
+}
+
+@media screen and (max-width: 600px){
+    .linkBar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .linkBar{
+        display: none;
+    }
+}

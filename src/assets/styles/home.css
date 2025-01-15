@@ -1,0 +1,364 @@
+/* Header Styles */
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainHead{
+    padding: 150px 200px 400px 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px){
+    .topBar{
+        display: none;
+    }
+
+    .mainHead{
+        padding: 25px 10px !important;
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+    .mainHead{
+        padding: 25px 10px;
+    }
+
+    .mainHead{
+        padding-top: 50px;
+    }
+}
+
+    /* Main Name Headings */
+
+.mainHead p{
+    color:#FFD464
+}
+
+.mainHead h1{
+    font-size: 40pt;
+    padding-right: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.typeAnimation{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #FFD464; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+      typing 2.25s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+.occupationType{
+    opacity: 1 !important;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+      typingO 3s steps(60, end),
+      blink-caret .75s step-end infinite;
+}
+
+#unAnimated{
+    opacity: 0;
+    border-right: .15em solid #FFD464; /* The typwriter cursor */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 315px }
+  }
+
+@keyframes typingO{
+    from { width: 0 }
+    to { width: 565px }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:#FFD464; }
+}
+
+.name{
+    display: flex
+}
+
+#animatedName{
+    color: white;
+}
+
+.occupation{
+    display: flex;
+}
+
+#blurb{
+    opacity: 0;
+    width: 565px;
+    line-height: 30px;
+
+}
+
+.blurb{
+    width: 565px;
+    line-height: 30px;
+    animation: blurb 5s ease-in-out;
+}
+
+@keyframes blurb{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .mainHead h1{
+        font-size: 20pt;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .mainHead div h1{
+        border-right: none;
+    }
+
+    #unAnimated{
+        border-right: none;
+    }
+
+    .blurb{
+        width: 80vw;
+    }
+}
+
+/* about section */
+
+#about{
+    padding: 0px 200px 150px 200px;
+    display: flex;
+    line-height: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutText{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+
+}
+
+.aboutText h2, .aboutText p{
+    display: inline;
+}
+
+.aboutText h2{
+    font-size: 24pt;
+}
+
+.yellow{
+    color: #FFD464;
+}
+
+.headshot{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 600px){
+   #about{
+    padding: 25px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
+   .headshot{
+    display: none;
+   }
+
+   .aboutText{
+    width: 80vw;
+   }
+
+   .aboutText h2{
+    font-size: 16pt;
+}
+
+}
+
+@media screen and (max-width: 1100px){
+    #about{
+        padding: 25px 10px;
+    }
+
+    .headshot{
+        height: 150px;
+        width: 150px;
+       }
+
+    .aboutText{
+        width: 70vw;
+        }
+}
+
+/* Projects */
+
+#projects{
+    padding: 0px 200px 350px 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.projBox h5{
+    color: #FFD464;
+    margin-bottom: 0px;
+}
+
+.projBox h2{
+    color: white;
+    margin-top: 10px;
+}
+
+.projBox p{
+    font-size: 16px;
+}
+
+.projBox img{
+    max-width: 400px;
+    margin-left: 100px;
+}
+
+.projBox div a{
+    background-color: lightgray; 
+    border: none;
+    color: #355E3B;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.projBox div a:hover{
+    background-color: #FFD464;
+    font-size: 1.01rem;
+}
+
+@media screen and (max-width: 600px){
+    .projBox{
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+ 
+    #projects{
+        padding: 25px 10px;
+    }
+
+    .projBox img{
+        max-width: 250px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+ }
+
+ @media screen and (max-width: 1100px){
+    #projects{
+        padding: 25px 10px;
+    }
+
+    
+}
+
+    /* animate on scroll */
+
+    .animate-via-scroll{
+        opacity: 0;
+        transition: all 1s ease-out 0.2s;
+    }
+
+    .animated-via-scroll{
+        opacity: 1;
+    }
+
+/* contact/footer */
+
+#contact{
+    padding: 0px 400px 350px 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact h3{
+    font-size: 24pt;
+    color: white;
+    margin-bottom: 0;
+}
+
+#contact p{
+    color: #FFD464;
+}
+
+.contactLink a{
+    background-color: lightgray; 
+    border: none;
+    color: #355E3B;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline;
+}
+
+.contactLink a:hover{
+    background-color: #FFD464;
+}
+
+.contactLink{
+ display: flex;
+ justify-content: flex-start;
+}
+
+
+@media screen and (max-width: 600px){
+
+    #contact{
+        padding: 25px 10px;
+    }
+
+    #contact h3{
+        font-size: 20pt;
+    }
+ }
+
+ @media screen and (max-width: 1100px){
+    #contact{
+        padding: 25px 10px;
+    }
+}
+
+/* Footer */
+footer p{
+    text-align: center;
+    font-size: 8pt;
+    margin: 5px;
+}

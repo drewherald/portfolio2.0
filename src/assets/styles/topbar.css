@@ -1,0 +1,40 @@
+.topBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    right: 10px;
+    top: 0;
+    padding-top: 10px;
+}
+
+.nameBox{
+    padding-left: 35px;
+    font-size: 18pt;
+}
+
+.nameBox a{
+    text-decoration: none;
+}
+
+.nameBox a:hover{
+    color: #FFD464;
+}
+
+.linkContainer a{
+    text-decoration: none;
+    padding: 10px 25px;
+    display: inline-block;
+    font-size: 14pt;
+    border-radius: 10px;
+    background: linear-gradient(to left, #355E3B 50%, #FFD464 50%) right;
+    background-size: 201%;
+    transition: .5s ease-out;
+    
+}
+
+.linkContainer a:hover{
+    background-position: left;
+    color: black
+}

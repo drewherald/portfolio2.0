@@ -2,6 +2,8 @@ import Linkbar from '../components/Linkbar'
 import Topbar from '../components/Topbar'
 import React from 'react'
 import headshot from '../assets/images/headshot.jpg'
+import '../assets/styles/home.css'
+
 export default function Home() {
   return (
     <div>

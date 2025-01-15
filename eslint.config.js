@@ -23,6 +23,10 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
+    extends: [
+    "eslint:recommended",
+    "plugin:react/recommended"  //this plugin is required to use eslint for react, otherwise we will get errors for 'React' import, as 'no-unused-vars'
+  ],
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,

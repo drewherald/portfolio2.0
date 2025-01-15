@@ -1,4 +1,5 @@
 import React from 'react'
+import '../assets/styles/topbar.css'
 
 export default function Topbar() {
   return (
