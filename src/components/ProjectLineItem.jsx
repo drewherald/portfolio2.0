@@ -8,7 +8,7 @@ export default function ProjectLineItem({project}) {
     let image = project.name
 
     switch(image){
-        case "Flockrank.net":
+        case "FlockRank.net":
             image = flockrank
             break
         
@@ -33,7 +33,7 @@ export default function ProjectLineItem({project}) {
         <p className="animate-via-scroll">
             {project.description}
         </p>
-        <p className="animate-via-scroll">{project.techStack}</p>
+        <p className="animate-via-scroll">Tech Stack: {project.techStack}</p>
         <a href={project.liveapp} className="animate-via-scroll" style={{marginRight: '10px' }}>Live App</a>
         {project.repo != null ?  <a href={project.repo} className="animate-via-scroll">Repository</a> :  <a href={project.repo} className="animate-via-scroll">Repository Unavailable</a>}
     </div>

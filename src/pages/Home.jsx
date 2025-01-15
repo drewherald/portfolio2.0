@@ -12,22 +12,22 @@ export default function Home() {
 
     const projects = [
 
-        {name: 'Flockrank.net', 
-         description: 'desc',
-         techStack: 'React, Express.js, Node.js, MongoDB HTML, CSS',
+        {name: 'FlockRank.net', 
+         description: 'My passion project - FlockRank is a full-stack web application for fans of the band ‘Goose’. Utilized React, Express.js and MongoDB to host user-specific submissions. Users can create an account, make posts, comment, and upvote their favorite songs with all actions being saved in a database. ',
+         techStack: 'React, Express.js, Node.js, MongoDB, HTML, CSS',
          liveapp: 'https://flockrank.net',
          repo: null 
         },
 
         {name: 'Alias Media & Design', 
-            description: 'desc',
+            description: 'Homepage site for Alias Media & Design, a digital advertising startup that I interned at. This project involved me working with a creative director and translating their figma mock ups into functional code.',
             techStack: 'React, HTML, CSS',
             liveapp: 'https://aliasmediadesign.com',
-            repo: 'https://github.com/drewherald/aliaswebsite' 
+            repo: null
         },
 
         {name: 'Daisy Market', 
-            description: 'desc',
+            description: 'Daisy Market is a fashion brand created by a connection I made at my internship. Using his design, I developed a mock website for him to implement if he ever wanted to follow through with his brand. The website utilizes the fake store API to load products and has a functioning cart.',
             techStack: 'React, HTML, CSS',
             liveapp: 'https://daisymarket.netlify.app/',
             repo: 'https://github.com/drewherald/daisymarket' 
