@@ -3,8 +3,35 @@ import Topbar from '../components/Topbar'
 import React from 'react'
 import headshot from '../assets/images/headshot.jpg'
 import '../assets/styles/home.css'
+import ProjectLineItem from '../components/ProjectLineItem'
 
 export default function Home() {
+
+    const projects = [
+
+        {name: 'Flockrank.net', 
+         description: 'desc',
+         techStack: 'React, Express.js, Node.js, MongoDB HTML, CSS',
+         liveapp: 'https://flockrank.net',
+         repo: null 
+        },
+
+        {name: 'Alias Media & Design', 
+            description: 'desc',
+            techStack: 'React, HTML, CSS',
+            liveapp: 'https://aliasmediadesign.com',
+            repo: 'https://github.com/drewherald/aliaswebsite' 
+        },
+
+        {name: 'Daisy Market', 
+            description: 'desc',
+            techStack: 'React, HTML, CSS',
+            liveapp: 'https://daisymarket.netlify.app/',
+            repo: 'https://github.com/drewherald/daisymarket' 
+        }
+    ]
+
+
   return (
     <div>
         
@@ -27,18 +54,18 @@ export default function Home() {
                 programming. Starting with Java and swiftly moving into the world of web development, it began to consume all of 
                 my free time. While I graduated with a economics degree, I knew I wanted to spend my life learning
                 and writing code. As a self taught developer, I am already commited to explore the unknown, building upon my 
-                skills every day with a hunger to improve. Whether git it be collaborating with a team or building webapps from my 
-                home office, I am driven by the desire to create applications that provide value to those that use them
+                skills every day with a hunger to improve. Whether it be collaborating with a team or building webapps from my 
+                home office, I am driven by the desire to create applications that provide value to their users.
             </p></div>
         </div>
         <img src={headshot} alt='headshot' className='headshot' />
         </section>
         <section id="projects">
-
+                {projects.map((project) => <ProjectLineItem project={project} key={project.name}/>)}
         </section>
         <section id="contact">
             <h3>Feel Free To Say Hello</h3>
-            <p>Whether you want to chat about professional work or debate the best CSS framework, I'm always
+            <p>Whether you want to chat about professional work or debate the best JS framework, I'm always
                 available to talk. Don't be shy, hit the button below to send me an email!
             </p>
             <div className="contactLink"><a href="mailto:drewherald9@gmail.com" className="email-button">Contact Me</a></div>
