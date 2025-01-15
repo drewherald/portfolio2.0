@@ -1,11 +1,14 @@
 import Linkbar from '../components/Linkbar'
 import Topbar from '../components/Topbar'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import headshot from '../assets/images/headshot.jpg'
 import '../assets/styles/home.css'
 import ProjectLineItem from '../components/ProjectLineItem'
 
 export default function Home() {
+
+    const [shortTimeout, setShortTimeout] = useState(true)
+    const [longTimeout, setLongTimeout] = useState(true)
 
     const projects = [
 
@@ -31,6 +34,30 @@ export default function Home() {
         }
     ]
 
+    useEffect(() => {
+        setTimeout(setShortTimeout(false), 2300)
+        setTimeout(setLongTimeout(false), 6000)
+
+        const description = document.querySelectorAll('.animate-via-scroll')
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('animated-via-scroll')
+                }
+            })
+        }, {
+            threshold: 0.5
+        })
+
+        for(let i =0; i<description.length; i++){
+            const el = description[i]
+
+            observer.observe(el)
+        }
+    }, [])
+
+
 
   return (
     <div>
@@ -40,9 +67,9 @@ export default function Home() {
         <Linkbar />
         <div className="mainHead">
             <p>Hello! My name is</p>
-            <div className="name"><h1 className="typeAnimation" id="animatedName">Drew Herald</h1></div>
-            <div className="occupation"><h1 id="unAnimated">I am a Web Developer</h1></div>
-            <p id="blurb">With an emphasis on front end work but a passion for all things coding, I build engaging and 
+            <div className="name"><h1 className={shortTimeout ? "typeAnimation" : ''} id="animatedName">Drew Herald</h1></div>
+            <div className="occupation"><h1 id={longTimeout ? "unAnimated" : ''} className={shortTimeout ? "" : 'occupationType'}>I am a Web Developer</h1></div>
+            <p id={shortTimeout ? 'blurb' : ''} className={shortTimeout ? '' : 'blurb'}>With an emphasis on front end work but a passion for all things coding, I build engaging and 
                 interactive webpages to improve user experience. Keep scrolling to learn more! </p>
         </div>
         </header>

@@ -34,7 +34,7 @@ export default function ProjectLineItem({project}) {
             {project.description}
         </p>
         <p className="animate-via-scroll">{project.techStack}</p>
-        <a href={project.liveapp} className="animate-via-scroll">Live App</a>
+        <a href={project.liveapp} className="animate-via-scroll" style={{marginRight: '10px' }}>Live App</a>
         {project.repo != null ?  <a href={project.repo} className="animate-via-scroll">Repository</a> :  <a href={project.repo} className="animate-via-scroll">Repository Unavailable</a>}
     </div>
     <img src={image} alt="" />
