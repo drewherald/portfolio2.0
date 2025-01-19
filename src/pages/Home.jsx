@@ -16,7 +16,7 @@ export default function Home() {
          description: 'My passion project - FlockRank is a full-stack web application for fans of the band ‘Goose’. Utilized React, Express.js and MongoDB to host user-specific submissions. Users can create an account, make posts, comment, and upvote their favorite songs with all actions being saved in a database. ',
          techStack: 'React, Express.js, Node.js, MongoDB, HTML, CSS',
          liveapp: 'https://flockrank.net',
-         repo: null 
+         repo: 'https://github.com/drewherald/flockRank' 
         },
 
         {name: 'Alias Media & Design', 
