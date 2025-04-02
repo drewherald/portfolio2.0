@@ -21,7 +21,7 @@ export default function Home() {
 
         {name: 'Alias Media & Design', 
             description: 'Homepage site for Alias Media & Design, a digital advertising startup that I interned at. This project involved me working with a creative director and translating their figma mock ups into functional code.',
-            techStack: 'React, HTML, CSS',
+            techStack: 'React + Typescript, HTML, CSS',
             liveapp: 'https://aliasmediadesign.com',
             repo: null
         },
